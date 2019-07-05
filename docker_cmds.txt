@@ -1,0 +1,2 @@
+docker build -t adeelhazv/aws-batch-ml .
+docker run -it --rm --runtime=nvidia -v $HOME/.aws:/root/.aws:ro adeelhazv/aws-batch-ml bash

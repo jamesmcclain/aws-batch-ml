@@ -1,0 +1,31 @@
+{
+    "jobDefinitionName": "ahassanFastaiPluginCpuJobDef",
+    "type": "container",
+    "parameters": {},
+    "containerProperties": {
+        "image": "adeelhazv/rv-fastai:latest",
+        "vcpus": 1,
+        "memory": 6000,
+        "command": [],
+        "volumes": [
+            {
+                "host": {
+                    "sourcePath": "/home/ec2-user"
+                },
+                "name": "home"
+            }
+        ],
+        "environment": [],
+        "mountPoints": [
+            {
+                "containerPath": "/opt/data",
+                "readOnly": false,
+                "sourceVolume": "home"
+            }
+        ],
+        "readonlyRootFilesystem": false,
+        "privileged": true,
+        "ulimits": [],
+        "resourceRequirements": []
+    }
+}

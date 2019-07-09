@@ -1,1 +1,0 @@
-aws batch register-job-definition --cli-input-json file://gpu-job-def.json

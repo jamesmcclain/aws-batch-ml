@@ -1,3 +1,4 @@
-FROM adeelhazv/rv-fastai:latest
+FROM pytorch/pytorch:1.0.1-cuda10.0-cudnn7-devel
 
-COPY ./download_run_upload.sh /opt/src/download_run_upload.sh
+RUN pip install awscli --upgrade
+COPY ./download_run_upload.sh /workspace/download_run_upload.sh

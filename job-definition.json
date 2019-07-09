@@ -3,7 +3,7 @@
     "type": "container",
     "parameters": {},
     "containerProperties": {
-        "image": "adeelhazv/rv-fastai:latest",
+        "image": "jamesmcclain/aws-batch-ml:latest",
         "vcpus": 1,
         "memory": 16384,
         "command": [],
@@ -25,7 +25,6 @@
         ],
         "readonlyRootFilesystem": false,
         "privileged": true,
-        "ulimits": [],
-        "resourceRequirements": []
+        "ulimits": []
     }
 }

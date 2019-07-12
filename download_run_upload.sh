@@ -13,7 +13,6 @@ shift
 shift
 shift
 
-python ./$SCRIPT_NAME $*
+PYTHONUNBUFFERED=1 python ./$SCRIPT_NAME $*
 
 aws s3 cp $OUTPUT_NAME $OUTPUT_LOC
-

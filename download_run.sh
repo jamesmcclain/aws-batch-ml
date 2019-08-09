@@ -2,16 +2,10 @@
 
 SCRIPT_LOC=$1
 SCRIPT_NAME=$(basename $SCRIPT_LOC)
-OUTPUT_NAME=$2
-OUTPUT_LOC=$3
 
 
 aws s3 cp $SCRIPT_LOC $SCRIPT_NAME
 
 shift
-shift
-shift
 
 PYTHONUNBUFFERED=1 python ./$SCRIPT_NAME $*
-
-aws s3 cp $OUTPUT_NAME $OUTPUT_LOC

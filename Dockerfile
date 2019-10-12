@@ -4,7 +4,7 @@ RUN conda install -c pytorch -c fastai fastai && \
     conda clean -a
 RUN pip install awscli boto3 torchvision jupyterlab rasterio sklearn tabulate pyitlib --upgrade && \
     rm -rf /root/.cache/pip
-RUN apt-get update && apt-get install -y libcurl4-gnutls-dev pkg-config wget && \
+RUN apt-get update && apt-get install -y libcurl4-gnutls-dev pkg-config wget libgeos-dev && \
     apt-get autoremove && apt-get autoclean
 RUN cd /usr/local/src && \
     wget -k 'https://download.osgeo.org/gdal/2.4.2/gdal-2.4.2.tar.gz' && \
